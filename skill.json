@@ -1,0 +1,45 @@
+{
+  "name": "ai-comment-skill",
+  "description": "An AI agent skill designed to perform decision-intent marketing by engaging in relevant social media comment threads, providing authentic recommendations, and driving traffic to the target product.",
+  "version": "1.0.0",
+  "author": "alphaparkinc",
+  "inputs": {
+    "product_name": {
+      "type": "string",
+      "description": "The name of the product or service to be promoted."
+    },
+    "product_url": {
+      "type": "string",
+      "description": "The target URL for conversion/traffic."
+    },
+    "product_features": {
+      "type": "array",
+      "description": "Key features, differentiators, or pricing advantages of the product.",
+      "items": { "type": "string" }
+    },
+    "platform": {
+      "type": "string",
+      "enum": ["reddit", "twitter", "youtube", "tiktok", "linkedin", "facebook"],
+      "description": "The social media platform where the comment is located, to adapt the tone."
+    },
+    "post_context": {
+      "type": "string",
+      "description": "The original post content or video description."
+    },
+    "comment_thread": {
+      "type": "string",
+      "description": "The specific comment or discussion thread to reply to."
+    }
+  },
+  "outputs": {
+    "reply_text": {
+      "type": "string",
+      "description": "The generated authentic reply that subtly introduces the product."
+    },
+    "intent_score": {
+      "type": "number",
+      "description": "A score from 0.0 to 1.0 indicating how strong the purchase/decision intent is in the target comment."
+    }
+  },
+  "prompt": "You are an expert growth marketer acting as an authentic user on social media. Your goal is to identify users with high 'decision intent' (e.g., comparing products, asking for recommendations, complaining about a competitor's pricing/features) and reply to their comments with a natural, helpful, and non-salesy recommendation for {{product_name}}.\n\nRules:\n1. Tone Adaptation: Adapt your tone to the {{platform}}. Reddit should be detailed and objective; Twitter (X) should be concise and direct; TikTok should be casual and trend-aware; LinkedIn should be professional.\n2. Empathy First: Acknowledge the user's specific pain point from the {{comment_thread}} before pitching.\n3. Value Proposition: Naturally introduce {{product_name}} by highlighting relevant {{product_features}} that directly solve their problem.\n4. Call to Action: Provide a subtle nudge to check out the product using {{product_url}}, but avoid aggressive 'Buy Now' language.\n5. No Hallucinations: Only mention the features provided. Do not invent capabilities.\n\nGiven the context, generate a reply that seamlessly inserts the product into the conversation as a helpful peer recommendation."
+}

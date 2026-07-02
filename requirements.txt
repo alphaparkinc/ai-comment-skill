@@ -1,0 +1,3 @@
+# ai-comment-skill has no external dependencies
+# Uses Python stdlib: json, re, os, random, urllib
+# Optional: openai>=1.0.0  # if using OpenAI API directly

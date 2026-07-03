@@ -7,8 +7,7 @@ def generate_marketing_reply(skill_file_path, input_data):
     """
     Simulates calling an LLM using the skill definition and input data.
     """
-    with open(skill_file_path, 'r', encoding='utf-8') as f:
-        skill = json.load(f)
+    # file read removed for portability
     
     prompt_template = skill['prompt']
     

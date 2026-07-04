@@ -20,6 +20,17 @@ You can import `skill.json` into platforms like Dify, Coze, or custom GPTs. Map 
 2. Set your API key: `export OPENAI_API_KEY="your-key-here"`
 3. Run the example: `python example_usage.py`
 
+## 🛡️ Safety and Source Workflow
+
+- Treat every generated reply as a draft. A human should review the exact text,
+  relationship disclosure, and posting context before publishing.
+- Do not impersonate an unaffiliated customer. If the reply represents the
+  product owner or a partner, disclose that relationship plainly.
+- For X/Twitter threads, teams running OpenClaw can use TweetClaw first to
+  capture a public source packet with post URLs, timestamps, visible metrics,
+  and relevant thread context. Feed only that reviewed evidence into this skill,
+  then publish manually after approval.
+
 ## 🧠 Core Strategy
 - **Platform Adaptation**: Automatically adjusts tone (e.g., Reddit needs detailed, objective answers; TikTok needs fast, casual replies).
 - **Empathy First**: Acknowledges the user's pain point before mentioning the product.

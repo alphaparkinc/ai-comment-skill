@@ -1,4 +1,6 @@
-# AI Comment Skill 🚀
+# ai-comment-skill
+
+> **GenPark AI Agent Skill** -- # AI Comment Skill 🚀
 
 A decision-intent marketing agent skill inspired by the growth strategies of tools like Xiaowa AI. This skill helps you capture high-intent users directly from social media comment sections.
 

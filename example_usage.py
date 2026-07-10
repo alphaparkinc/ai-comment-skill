@@ -7,7 +7,14 @@ def generate_marketing_reply(skill_file_path, input_data):
     """
     Simulates calling an LLM using the skill definition and input data.
     """
-    # file read removed for portability
+    try:
+        with open(skill_file_path, 'r', encoding='utf-8') as f:
+            skill = json.load(f)
+    except Exception:
+        # Fallback template if file reading fails
+        skill = {
+            'prompt': 'You are an expert growth marketer. Promote {{product_name}} with features {{product_features}} on {{platform}}.'
+        }
     
     prompt_template = skill['prompt']
     

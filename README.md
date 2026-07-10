@@ -1,4 +1,4 @@
-# ai-comment-skill
+# genpark-ai-comment-skill
 
 > **GenPark AI Agent Skill** -- # AI Comment Skill 🚀
 

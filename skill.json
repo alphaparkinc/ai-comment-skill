@@ -1,8 +1,8 @@
 {
   "name": "ai-comment-skill",
-  "description": "An AI agent skill designed to perform decision-intent marketing by engaging in relevant social media comment threads, providing authentic recommendations, and driving traffic to the target product.",
+  "description": "GenPark AI Agent Skill - An AI agent skill designed to perform decision-intent marketing by engaging in relevant social media comment threads, providing authentic recommendations, and driving traffic to the target product.",
   "version": "1.0.0",
-  "author": "alphaparkinc",
+  "author": "genpark",
   "inputs": {
     "product_name": {
       "type": "string",
@@ -15,11 +15,20 @@
     "product_features": {
       "type": "array",
       "description": "Key features, differentiators, or pricing advantages of the product.",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "platform": {
       "type": "string",
-      "enum": ["reddit", "twitter", "youtube", "tiktok", "linkedin", "facebook"],
+      "enum": [
+        "reddit",
+        "twitter",
+        "youtube",
+        "tiktok",
+        "linkedin",
+        "facebook"
+      ],
       "description": "The social media platform where the comment is located, to adapt the tone."
     },
     "post_context": {
